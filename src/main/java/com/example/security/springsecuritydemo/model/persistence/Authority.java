@@ -1,6 +1,6 @@
 package com.example.security.springsecuritydemo.model.persistence;
 
-import com.example.security.springsecuritydemo.model.enums.AuthorityName;
+import com.example.security.springsecuritydemo.enums.AuthorityName;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
