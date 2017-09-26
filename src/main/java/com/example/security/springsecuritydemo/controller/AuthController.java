@@ -7,6 +7,7 @@ import com.example.security.springsecuritydemo.service.AuthService;
 import com.example.security.springsecuritydemo.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,7 +31,7 @@ public class AuthController {
     }
 
     @RequestMapping(value = "/signin", method = RequestMethod.POST)
-    public SignInResult signIn(SignInUser signInUser) {
+    public SignInResult signIn(@RequestBody SignInUser signInUser) {
         return authService.signIn(signInUser.getUsername(), signInUser.getPassword());
     }
 }
