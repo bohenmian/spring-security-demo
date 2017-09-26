@@ -1,0 +1,26 @@
+token:
+  service:
+    header: Authorization
+    secret: mySecret
+    expiration:  604800
+    head: "Bearer "
+    path: auth
+    refresh: refresh
+logging:
+  level:
+    org.springframework:
+      data: DEBUG
+      security: DEBUG
+server:
+  port: 8080
+
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    password: 128000
+    username: root
